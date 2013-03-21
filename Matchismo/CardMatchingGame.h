@@ -8,14 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "Card.h"
 #import "Deck.h"
+#import "CardGame.h"
 
-@interface CardMatchingGame : NSObject
+@interface CardMatchingGame : CardGame
 
--(id) initWithCardCount:(NSUInteger) cardCount usingDeck:(Deck *) deck;
 -(void) flipCardAtIndex:(NSUInteger) index;
--(Card *) cardAtIndex:(NSUInteger) index;
 
--(void) startGame;
 
 /* Returns a string describing the result of the last flip:
  *   If matching:                   "Matched C1 & C2: x points"
@@ -24,7 +22,6 @@
 */
 // -(NSString *) lastFlipResultString;
 
-@property (readonly, nonatomic) int score;
 @property (strong, nonatomic) NSString *lastFlipResultString;
 
 @end
