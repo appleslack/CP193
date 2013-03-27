@@ -27,6 +27,15 @@
 #define MATCH_ALL       MATCH_COLOR&MATCH_SHAPE&MATCH_FILL&MATCH_NUMBER
 #define MATCH_NONE      0
 
+// Need to answer this basic premise:
+/* A SET is 3 cards in which each individual feature is either:
+      ALL THE SAME on each card  
+        (OR)
+      ALL DIFFERENT on each card
+
+ EX:  NOT A SET!  Two have TWO symbols and one does not.
+ */
+
 -(BOOL) completesSet:(NSArray *) otherFlippedCards
 {
     BOOL matched = NO;

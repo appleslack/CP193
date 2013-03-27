@@ -44,4 +44,21 @@
     return retCard;
 }
 
+-(Card *) cardAtIndex:(NSUInteger) index
+{
+    return self.cards[index];
+}
+
+// Return <class> has %d cards: card[0].description, card[1].description, ... card[n-1].description
+
+-(NSString *) description
+{
+    NSMutableString *desc = [NSMutableString stringWithFormat:@"%@ has %d cards: ", [[self class]description], self.cards.count];
+    for( int inx=0; inx<self.cards.count; inx++ ) {
+        [desc appendFormat:@"%@, ", [self.cards[inx] description]];
+    }
+
+    return desc;
+}
+
 @end

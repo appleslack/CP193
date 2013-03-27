@@ -14,7 +14,7 @@
 @interface CardGame : NSObject
 -(id) initWithCardCount:(NSUInteger) cardCount usingDeck:(Deck *) deck;
 -(Card *) cardAtIndex:(NSUInteger) index;
--(void) startGame;
+-(void) startGame:(BOOL) testMode;
 
 @property (nonatomic) int score;
 @property (strong, nonatomic) NSMutableArray *cards;

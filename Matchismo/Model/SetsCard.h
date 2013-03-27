@@ -12,25 +12,25 @@ typedef enum {
     kCardColorRed,
     kCardColorPurple,
     kCardColorGreen
-} SGCardColor;
+} kSGCardColor;
 
 typedef enum {
     kCardFillSolid,
     kCardFillPattern,
     kCardFillEmpty
-}SGCardFill;
+} kSGCardFill;
 
 typedef enum {
     kCardShapeSwiggles,
     kCardShapeDiamond,
     kCardShapeOval
-} SGCardShape;
+} kSGCardShape;
 
 @interface SetsCard : Card
 
-@property (nonatomic) SGCardColor cardColor;
-@property (nonatomic) SGCardFill  cardFill;
-@property (nonatomic) SGCardShape cardShape;
+@property (nonatomic) kSGCardColor cardColor;
+@property (nonatomic) kSGCardFill  cardFill;
+@property (nonatomic) kSGCardShape cardShape;
 @property (nonatomic) int         numShapes;
 
 @end

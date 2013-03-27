@@ -22,17 +22,26 @@
     if( (self = [super init] ) ) {
         _deck = deck;
         _cardCount = cardCount;
-        [self startGame];
+        [self startGame:FALSE];
     }
     
     return self;
 }
 
--(void) startGame
+-(void) startGame:(BOOL) testMode
 {
     NSMutableArray *newCards = [NSMutableArray array];
-    for( int inx=0; inx<self.cardCount; inx++ ) {
-        newCards[inx] = [self.deck drawRandomCard];
+    if( !testMode ) {
+        for( int inx=0; inx<self.cardCount; inx++ ) {
+            newCards[inx] = [self.deck drawRandomCard];
+        }
+    }
+    // For testing purposes, I want to have cards in known positions so I can pull out of the deck
+    // and do various unit tests with preset card sets.
+    else {
+        for( int inx=0; inx<self.cardCount; inx++ ) {
+            newCards[inx] = [self.deck cardAtIndex:inx];
+        }
     }
     self.cards = newCards;
     self.score = 0;

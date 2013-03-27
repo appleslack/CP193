@@ -1,17 +1,17 @@
 //
-//  CardGameViewController.m
+//  MatchingGameViewController.m
 //  Matchismo
 //
 //  Created by Stuart Slack on 3/7/13.
 //  Copyright (c) 2013 Redtail Software, Inc. All rights reserved.
 //
 
-#import "CardGameViewController.h"
+#import "MatchingGameViewController.h"
 #import "PlayingCardDeck.h"
 #import "CardMatchingGame.h"
 #import "Card.h"
 
-@interface CardGameViewController ()
+@interface MatchingGameViewController ()
 -(void) updateUI;
 
 @property (nonatomic) int flipCount;
@@ -23,7 +23,7 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 @end
 
-@implementation CardGameViewController
+@implementation MatchingGameViewController
 
 -(CardMatchingGame *) game
 {
@@ -72,7 +72,7 @@
 
 - (IBAction)dealCards
 {
-    [self.game startGame];
+    [self.game startGame:FALSE];
     [self updateUI];
 }
 
@@ -80,9 +80,16 @@
 {
     self.lastFlipLabel.text = @"";
     
-    [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
-    self.flipCount++;
-    [self updateUI];
+    NSUInteger index = [self.cardButtons indexOfObject:sender];
+    if( NSNotFound != index ) {
+        [self.game flipCardAtIndex:[self.cardButtons indexOfObject:sender]];
+        self.flipCount++;
+        [self updateUI];
+    }
+    else {
+        self.lastFlipLabel.text = @"Error - card not found";
+        [self updateUI];
+    }
 }
 
 - (void)didReceiveMemoryWarning

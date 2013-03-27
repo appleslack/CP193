@@ -10,6 +10,6 @@
 #import "CardButton.h"
 #import "PlayingCardDeck.h"
 
-@interface CardGameViewController : UIViewController
+@interface MatchingGameViewController : UIViewController
 
 @end

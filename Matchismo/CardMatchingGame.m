@@ -15,7 +15,7 @@
 
 -(void) startGame
 {
-    [super startGame];
+    [super startGame:FALSE];
     self.lastFlipResultString = @"";
 }
 
