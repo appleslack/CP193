@@ -18,7 +18,7 @@
  EX:  NOT A SET!  Two have TWO symbols and one does not.
  */
 
--(id) cardWithNumSymbols:(int)numSymbols color:(kSGCardColor)color shading:(kSGCardShading)shading symbol:(kSGCardSymbol) symbol
++(id) cardWithNumSymbols:(int)numSymbols color:(kSGCardColor)color shading:(kSGCardShading)shading symbol:(kSGCardSymbol) symbol
 {
     SetsCard *card = [SetsCard new];
     card.numSymbols = numSymbols;
@@ -31,10 +31,18 @@
 
 -(NSString *) description
 {   // Card has 2 Solid Red Squirleys
-    NSMutableString *str = [NSMutableString new];
-    [str appendFormat:@"Card has %d", self.numSymbols];
     NSString *colorStr = nil;
-
+    NSString *numberStr = nil;
+    
+    if( self.numSymbols == kCardOneSymbol) {
+        numberStr = @"One";
+    }
+    else if(self.numSymbols == kCardOneSymbol) {
+        numberStr = @"Two";
+    }
+    else
+        numberStr = @"Three";
+    
     if( self.color == kCardColorRed )
         colorStr = @"Red";
     else if( self.color == kCardColorGreen)
@@ -53,17 +61,32 @@
     }
     NSString *symbolStr = nil;
     if( self.symbol == kCardSymbolDiamonds ) {
-        symbolStr = @"Diamonds";
+        if(self.numSymbols==kCardOneSymbol) {
+            symbolStr = @"Diamond";
+        }
+        else {
+            symbolStr = @"Diamonds";
+        }
     }
     else if( self.symbol == kCardSymbolOvals ) {
-        symbolStr = @"Ovals";
+        if(self.numSymbols==kCardOneSymbol) {
+            symbolStr = @"Oval";
+        }
+        else {
+            symbolStr = @"Ovals";
+        }
     }
     else {
-        symbolStr = @"Swiggles";
+        if(self.numSymbols==kCardOneSymbol) {
+            symbolStr = @"Swiggle";
+        }
+        else {
+            symbolStr = @"Swiggles";
+        }
     }
     
-    return [NSString stringWithFormat:@"Card has %d %@ %@ %@",
-            self.numSymbols,
+    return [NSString stringWithFormat:@"Card has %@ %@ %@ %@",
+            numberStr,
             shadeStr,
             colorStr,
             symbolStr

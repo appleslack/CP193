@@ -35,7 +35,7 @@
             [self.selectedCards addObject:card];
             if( self.selectedCards.count == 3 ) {
                 // MATCH THEM!
-                BOOL match = [self matchSet:self.selectedCards];
+                BOOL match = [[self class] matchSet:self.selectedCards];
                 if( match ){
                     NSLog(@"Match Found!!!");
                     
@@ -67,13 +67,14 @@
 // All different Numbers - All are Red - All are Ovals - All different Shadings
 // All different Numbers - All different Colors - All different Symbols - All are Empty
 #define MATCH_COLOR     1<<3
-#define MATCH_SHAPE     1<<2
-#define MATCH_FILL      1<<1
+#define MATCH_SYMBOL    1<<2
+#define MATCH_SHADING   1<<1
 #define MATCH_NUMBER    1<<0
 #define MATCH_ALL       MATCH_COLOR&MATCH_SHAPE&MATCH_FILL&MATCH_NUMBER
 #define MATCH_NONE      0
+#define MATCH_THREE     (1<<0|1<<1|1<<2)
 
--(BOOL) matchSet:(NSArray *) selectedCards
++(BOOL) matchSet:(NSArray *) selectedCards
 {
     BOOL matched = NO;
     
@@ -81,25 +82,53 @@
         SetsCard *firstCard = (SetsCard *)selectedCards[0];
         SetsCard *secondCard = (SetsCard *)selectedCards[1];
         SetsCard *thirdCard = (SetsCard *)selectedCards[2];
-        
+
+        NSLog(@"Attempting to match:  \n%@\n%@\n%@", thirdCard, firstCard, secondCard);
+
         //        BOOL matchColor = NO, matchFill = NO, matchShape = NO, matchNumber = NO;
         NSUInteger matchResult = 0;
+        kSGCardColor matchedColor =0;
+        kSGCardShading matchedShading;
+        kSGCardSymbol matchedSymbol;
+        NSUInteger matchedNumSymbols;
         
         // Check to see if all suits same or not same
-        if( thirdCard.color == firstCard.color == secondCard.color ) {
+        if( thirdCard.color&firstCard.color&secondCard.color ) {
             matchResult &= MATCH_COLOR;
-            //            matchColor = TRUE;
+            matchedColor = firstCard.color;
         }
-        if( thirdCard.symbol == firstCard.symbol == secondCard.symbol ) {
-            matchResult &= MATCH_SHAPE;
+        // If they're not all the same then they need to be all different - check this
+        else if( (firstCard.color|secondCard.color|thirdCard.color) != MATCH_THREE ) {
+            NSLog(@"No match - TWO colors are the same and one is different");
+            goto finished;
         }
-        if( thirdCard.shading == firstCard.shading == secondCard.shading ) {
-            matchResult &= MATCH_FILL;
+
+        if( firstCard.symbol&secondCard.symbol&thirdCard.symbol ) {
+            matchResult |= MATCH_SYMBOL;
+            matchedSymbol = firstCard.symbol;
         }
-        if( thirdCard.numSymbols == firstCard.numSymbols == secondCard.numSymbols ) {
-            matchResult &= MATCH_NUMBER;
+        else if( (firstCard.symbol|secondCard.symbol|thirdCard.symbol) != MATCH_THREE ) {
+            NSLog(@"No match - TWO symbols are the same and one is different");
+            goto finished;
         }
-        NSLog(@"Attempting to match:  \n%@\n%@\n%@", thirdCard, firstCard, secondCard);
+
+        if( firstCard.shading&secondCard.shading&thirdCard.shading) {
+            matchResult |= MATCH_SHADING;
+            matchedShading = firstCard.shading;
+        }
+        else if( (firstCard.shading|secondCard.shading|thirdCard.shading) != MATCH_THREE ){
+            NSLog(@"No match - TWO shadings are the same and one is different");
+            goto finished;
+        }
+        
+        if( firstCard.numSymbols&secondCard.numSymbols&thirdCard.numSymbols) {
+            matchResult |= MATCH_NUMBER;
+            matchedNumSymbols = firstCard.numSymbols;
+        }
+        else if( (firstCard.numSymbols|secondCard.numSymbols|thirdCard.numSymbols) != MATCH_THREE ) {
+            NSLog(@"No match - TWO number symbols are the same and one is different");
+            goto finished;
+        }
         
         // 1st Case:  Nothing is the same
         if( matchResult == 0 ) {
@@ -107,24 +136,26 @@
             matched = TRUE;
         }
         // 2nd Case:  Only 1 matched, none of the others (Ex: color match, none others)
-        if( (MATCH_COLOR && matchResult) == matchResult ) {
+        if( (MATCH_COLOR & matchResult) == matchResult ) {
             NSLog(@"Matched COLOR everything else is different");
             matched = TRUE;
         }
-        else if( (MATCH_SHAPE && matchResult) == matchResult) {
+        else if( (MATCH_SYMBOL & matchResult) == matchResult) {
             NSLog(@"Matched SHAPE - everything else is different");
             matched = TRUE;
         }
-        else if( (MATCH_FILL && matchResult) == matchResult) {
+        else if( (MATCH_SHADING & matchResult) == matchResult) {
             NSLog(@"Matched FILL - everything else is different");
             matched = TRUE;
         }
-        else if( (MATCH_NUMBER && matchResult) == matchResult) {
+        else if( (MATCH_NUMBER & matchResult) == matchResult) {
             NSLog(@"Matched NUMBER - everything else is different");
             matched = TRUE;
         }
         
     }
+    
+finished:
     
     NSLog(@"Returing match result: %@", matched?@"YES" : @"NO");
     return matched;

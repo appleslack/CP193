@@ -40,9 +40,18 @@
     else {
         shapeChar = @"◼︎";
     }
-    for( int inx=0; inx<card.numSymbols ; inx++ ) {
+    int numToDraw = 1;
+    if( card.numSymbols == kCardTwoSymbols ) {
+        numToDraw+=1;
+    }
+    else if( card.numSymbols == kCardThreeSymbols ) {
+        numToDraw+=2;
+    }
+    
+    for( int inx=0; inx<numToDraw ; inx++ ) {
         [string appendString:shapeChar];
     }
+    
     UIColor *colorVal = nil;
     if( card.color == kCardColorGreen ) {
         colorVal = [UIColor greenColor];

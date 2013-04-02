@@ -34,19 +34,22 @@
 		48B3DBB516FAA1DB003C5E50 /* SetsCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3DBB416FAA1DB003C5E50 /* SetsCardGame.m */; };
 		48B3DBB816FC1448003C5E50 /* SetsCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3DBB716FC1448003C5E50 /* SetsCard.m */; };
 		48B3DBBB16FC268B003C5E50 /* SetsCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3DBBA16FC268B003C5E50 /* SetsCardDeck.m */; };
+		48C1DA77170B337900A7E3D4 /* SetsGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C1DA76170B337900A7E3D4 /* SetsGameTests.m */; };
+		48C1DA78170B36EA00A7E3D4 /* SetsCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3DBB716FC1448003C5E50 /* SetsCard.m */; };
+		48C1DA79170B36F000A7E3D4 /* SetsCardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 48B3DBB416FAA1DB003C5E50 /* SetsCardGame.m */; };
+		48C1DA7A170B371F00A7E3D4 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 489C4AEA16F1459800DB98D9 /* Card.m */; };
+		48C1DA7B170B372700A7E3D4 /* CardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D98DB016FA9554007997D3 /* CardGame.m */; };
 		48D98DAE16FA94D2007997D3 /* SetsCardGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D98DAD16FA94D2007997D3 /* SetsCardGameViewController.m */; };
 		48D98DB116FA9554007997D3 /* CardGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D98DB016FA9554007997D3 /* CardGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		481E89201702401700EE9988 /* SetsGameTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetsGameTestCase.h; path = Tests/SetsGameTestCase.h; sourceTree = "<group>"; };
-		481E89211702401700EE9988 /* SetsGameTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetsGameTestCase.m; path = Tests/SetsGameTestCase.m; sourceTree = "<group>"; };
 		481E89291702452C00EE9988 /* MatchismoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchismoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		481E892A1702452C00EE9988 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		481E89301702452C00EE9988 /* MatchismoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MatchismoTests-Info.plist"; sourceTree = "<group>"; };
 		481E89321702452C00EE9988 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		481E89341702452C00EE9988 /* MatchismoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchismoTests.h; sourceTree = "<group>"; };
-		481E89351702452C00EE9988 /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchismoTests.m; sourceTree = "<group>"; };
+		481E89341702452C00EE9988 /* MatchismoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MatchismoTests.h; path = MatchismoTests/MatchismoTests.h; sourceTree = "<group>"; };
+		481E89351702452C00EE9988 /* MatchismoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MatchismoTests.m; path = MatchismoTests/MatchismoTests.m; sourceTree = "<group>"; };
 		481E89371702452C00EE9988 /* MatchismoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MatchismoTests-Prefix.pch"; sourceTree = "<group>"; };
 		482B277B16F8D389005BB9B6 /* playingcardback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playingcardback.png; sourceTree = SOURCE_ROOT; };
 		4833719A16F1A5D200436B7D /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = SOURCE_ROOT; };
@@ -85,6 +88,8 @@
 		48B3DBB716FC1448003C5E50 /* SetsCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetsCard.m; path = Model/SetsCard.m; sourceTree = SOURCE_ROOT; };
 		48B3DBB916FC268B003C5E50 /* SetsCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetsCardDeck.h; sourceTree = SOURCE_ROOT; };
 		48B3DBBA16FC268B003C5E50 /* SetsCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetsCardDeck.m; sourceTree = SOURCE_ROOT; };
+		48C1DA75170B337900A7E3D4 /* SetsGameTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetsGameTests.h; path = Tests/SetsGameTests.h; sourceTree = "<group>"; };
+		48C1DA76170B337900A7E3D4 /* SetsGameTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetsGameTests.m; path = Tests/SetsGameTests.m; sourceTree = "<group>"; };
 		48D98DAC16FA94D2007997D3 /* SetsCardGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetsCardGameViewController.h; sourceTree = SOURCE_ROOT; };
 		48D98DAD16FA94D2007997D3 /* SetsCardGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetsCardGameViewController.m; sourceTree = SOURCE_ROOT; };
 		48D98DAF16FA9554007997D3 /* CardGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardGame.h; path = Model/CardGame.h; sourceTree = SOURCE_ROOT; };
@@ -118,8 +123,10 @@
 		481E89231702402200EE9988 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				481E89201702401700EE9988 /* SetsGameTestCase.h */,
-				481E89211702401700EE9988 /* SetsGameTestCase.m */,
+				48C1DA75170B337900A7E3D4 /* SetsGameTests.h */,
+				48C1DA76170B337900A7E3D4 /* SetsGameTests.m */,
+				481E89341702452C00EE9988 /* MatchismoTests.h */,
+				481E89351702452C00EE9988 /* MatchismoTests.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -127,8 +134,6 @@
 		481E892E1702452C00EE9988 /* MatchismoTests */ = {
 			isa = PBXGroup;
 			children = (
-				481E89341702452C00EE9988 /* MatchismoTests.h */,
-				481E89351702452C00EE9988 /* MatchismoTests.m */,
 				481E892F1702452C00EE9988 /* Supporting Files */,
 			);
 			path = MatchismoTests;
@@ -346,6 +351,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C1DA7A170B371F00A7E3D4 /* Card.m in Sources */,
+				48C1DA7B170B372700A7E3D4 /* CardGame.m in Sources */,
+				48C1DA79170B36F000A7E3D4 /* SetsCardGame.m in Sources */,
+				48C1DA78170B36EA00A7E3D4 /* SetsCard.m in Sources */,
+				48C1DA77170B337900A7E3D4 /* SetsGameTests.m in Sources */,
 				481E89361702452C00EE9988 /* MatchismoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +542,7 @@
 				481E893A1702452C00EE9988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48ABE9FA16E957190055E822 /* Build configuration list for PBXProject "Matchismo" */ = {
 			isa = XCConfigurationList;

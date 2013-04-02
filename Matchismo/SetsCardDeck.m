@@ -33,13 +33,13 @@
     for( int inx=0; inx<NUM_COLORS; inx++ ) {
         for( int jnx=0; jnx<NUM_SHAPES; jnx++ ) {
             for( int knx=0;knx<NUM_FILLS;knx++) {
-                for( int numShapes=1; numShapes <= 3; numShapes++ ) {
+                for( int numShapes=0; numShapes < 3; numShapes++ ) {
                     SetsCard *card = [[SetsCard alloc] init];
 
-                    card.color = (kSGCardColor)inx;
-                    card.symbol = (kSGCardSymbol) jnx;
-                    card.shading = (kSGCardShading) knx;
-                    card.numSymbols = numShapes;
+                    card.color = (kSGCardColor)(1<<inx);
+                    card.symbol = (kSGCardSymbol)(1<<jnx);
+                    card.shading = (kSGCardShading)(1<<knx);
+                    card.numSymbols = (kSGCardNumSymbols)(1<<numShapes);
                     
                     [self addCard:card atTop:TRUE];
                 }
