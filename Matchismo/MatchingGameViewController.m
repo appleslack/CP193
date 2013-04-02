@@ -57,7 +57,10 @@
 //        Card *card = [self.deck drawRandomCard];
 //        [button setTitle:card.contents forState:UIControlStateSelected];
 //    }
-    _cardButtons = cardButtons;
+    if( cardButtons ) {
+        _cardButtons = cardButtons;
+    }
+    
     [self updateUI];
 }
 

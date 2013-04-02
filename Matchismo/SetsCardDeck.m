@@ -36,10 +36,12 @@
                 for( int numShapes=1; numShapes <= 3; numShapes++ ) {
                     SetsCard *card = [[SetsCard alloc] init];
 
-                    card.cardColor = (kSGCardColor)inx;
-                    card.cardShape = (kSGCardShape) jnx;
-                    card.cardFill = (kSGCardFill) knx;
-                    card.numShapes = numShapes;
+                    card.color = (kSGCardColor)inx;
+                    card.symbol = (kSGCardSymbol) jnx;
+                    card.shading = (kSGCardShading) knx;
+                    card.numSymbols = numShapes;
+                    
+                    [self addCard:card atTop:TRUE];
                 }
             }
         }

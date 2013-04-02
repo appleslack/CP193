@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4385" systemVersion="13A418a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="wh2-mh-XEZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4385" systemVersion="13A431" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="wh2-mh-XEZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3429"/>
     </dependencies>
@@ -410,7 +410,7 @@
             </objects>
             <point key="canvasLocation" x="-1283" y="-1581"/>
         </scene>
-        <!--Sets Card Game View Controller - Item-->
+        <!--Sets Card Game View Controller - Sets Card Game-->
         <scene sceneID="Bk8-Fe-PN7">
             <objects>
                 <viewController id="sy8-rY-O0A" customClass="SetsCardGameViewController" sceneMemberID="viewController">
@@ -418,8 +418,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1WV-zC-6ba">
-                                <rect key="frame" x="24" y="20" width="48" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oMv-cX-9Db">
+                                <rect key="frame" x="6" y="20" width="74" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -430,12 +430,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="dPg-vS-ykG"/>
-                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="xv1-sk-MVH"/>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="DwF-zh-AIY"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="ZwM-rI-a58"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PoD-XV-rOa">
-                                <rect key="frame" x="80" y="20" width="48" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7hJ-5K-OgF">
+                                <rect key="frame" x="6" y="72" width="74" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,12 +446,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="3a6-lL-zYW"/>
-                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="xvh-H4-aOi"/>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="i6F-jn-Ouf"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="RkY-e5-Cq7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Wf-cN-G8v">
-                                <rect key="frame" x="136" y="20" width="48" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0dR-2s-iF9">
+                                <rect key="frame" x="6" y="124" width="74" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -462,12 +462,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="5r6-hO-IbH"/>
-                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="xy0-v9-ho0"/>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="5mk-ZD-cAc"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="y3W-CX-I5g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Skt-Ez-cj2">
-                                <rect key="frame" x="192" y="20" width="48" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O0J-Gh-Pq7">
+                                <rect key="frame" x="6" y="176" width="74" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -478,12 +478,12 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="6X6-81-Hfc"/>
-                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="iIJ-hK-KaO"/>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="xcX-gN-6xF"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Hlq-EO-7Pg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVk-19-yTZ">
-                                <rect key="frame" x="248" y="20" width="48" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yle-kj-QBH">
+                                <rect key="frame" x="6" y="228" width="74" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -494,8 +494,312 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="OCl-8s-pbz"/>
-                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Owl-uf-d24"/>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="EmG-0k-lPq"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="dUI-xV-av1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lhv-OO-bl2">
+                                <rect key="frame" x="6" y="280" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="l2x-Jr-AvZ"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="y2n-U5-JuU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sad-ma-BX2">
+                                <rect key="frame" x="84" y="20" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="7jr-4L-9kt"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="vwI-Yt-4Wc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WiS-45-M4D">
+                                <rect key="frame" x="162" y="20" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="U8p-wI-7aW"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="HrB-e9-gEQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lYc-qJ-aTz">
+                                <rect key="frame" x="240" y="20" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="KJH-DR-HTB"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="MSb-2R-jni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jG-qb-9cn">
+                                <rect key="frame" x="84" y="72" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="RLF-st-wKf"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="fxu-Dd-8Pg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wAh-Vx-Fdi">
+                                <rect key="frame" x="162" y="72" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="lcW-aj-xuD"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="khK-SU-OKW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cyf-fX-hmM">
+                                <rect key="frame" x="240" y="72" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="Q6F-H9-Fqa"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="tEC-hh-7UF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Pe-Au-BSV">
+                                <rect key="frame" x="84" y="124" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="CUW-9N-Zw8"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="7vD-y0-lCn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iYr-B4-YY7">
+                                <rect key="frame" x="162" y="124" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="QAG-AJ-djf"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Snf-b3-Ddw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NBO-nD-VUJ">
+                                <rect key="frame" x="240" y="124" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="PkU-bb-GsR"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="fnz-uJ-jaC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SqF-8z-m2O">
+                                <rect key="frame" x="84" y="176" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="qgP-4C-KKQ"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="1Il-dx-kmc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wNS-XU-rff">
+                                <rect key="frame" x="162" y="176" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="Jue-mf-zYQ"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="Orl-qS-dAA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mVD-0a-ubZ">
+                                <rect key="frame" x="240" y="176" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="a0Z-22-1eS"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="kPq-bL-ZpY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zlh-pg-LXf">
+                                <rect key="frame" x="84" y="228" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="J6B-9f-CgM"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="H6K-Mv-kMX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nwz-5d-f8W">
+                                <rect key="frame" x="162" y="228" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="Pth-iY-NS4"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="gL4-Au-hwB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eli-kg-QW2">
+                                <rect key="frame" x="240" y="228" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="8rB-fj-Xce"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="T58-P6-DSb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OEf-aS-YaT">
+                                <rect key="frame" x="84" y="280" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="FfN-52-A2v"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="zzt-8d-Oc8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hYk-ev-DZ9">
+                                <rect key="frame" x="162" y="280" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="gY2-DK-4lq"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="n2G-lc-saA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wdB-oI-Wzv">
+                                <rect key="frame" x="240" y="280" width="74" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="A♣︎"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseCard:" destination="sy8-rY-O0A" eventType="touchUpInside" id="wJA-Ig-vr0"/>
+                                    <action selector="flipCard:" destination="2" eventType="touchUpInside" id="a9l-8K-2Wx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="36o-eA-mx9">
@@ -511,7 +815,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SYm-oJ-pN0">
-                                <rect key="frame" x="123" y="365" width="82" height="27"/>
+                                <rect key="frame" x="119" y="361" width="82" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Deal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -527,15 +831,34 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uvi-nC-j3L"/>
+                    <tabBarItem key="tabBarItem" title="Sets Card Game" id="uvi-nC-j3L"/>
                     <connections>
                         <outlet property="flipsLabel" destination="53d-h0-E5P" id="5bo-Bh-Z1s"/>
                         <outlet property="scoreLabel" destination="36o-eA-mx9" id="YpO-KO-DRG"/>
-                        <outletCollection property="cardButtons" destination="1WV-zC-6ba" id="LrJ-FM-woZ"/>
-                        <outletCollection property="cardButtons" destination="PoD-XV-rOa" id="8I9-i1-tkz"/>
-                        <outletCollection property="cardButtons" destination="9Wf-cN-G8v" id="Pa1-57-o48"/>
-                        <outletCollection property="cardButtons" destination="Skt-Ez-cj2" id="ZHo-sT-DsC"/>
-                        <outletCollection property="cardButtons" destination="nVk-19-yTZ" id="CEV-1O-tNU"/>
+                        <outletCollection property="cardButtons" destination="oMv-cX-9Db" id="Saa-GV-skK"/>
+                        <outletCollection property="cardButtons" destination="sad-ma-BX2" id="jJ7-Qs-vKx"/>
+                        <outletCollection property="cardButtons" destination="WiS-45-M4D" id="rYx-5R-DG6"/>
+                        <outletCollection property="cardButtons" destination="lYc-qJ-aTz" id="GkS-uT-OKn"/>
+                        <outletCollection property="cardButtons" destination="7hJ-5K-OgF" id="W6P-wR-JfO"/>
+                        <outletCollection property="cardButtons" destination="8jG-qb-9cn" id="D01-eO-F8K"/>
+                        <outletCollection property="cardButtons" destination="wAh-Vx-Fdi" id="4no-VA-kva"/>
+                        <outletCollection property="cardButtons" destination="Cyf-fX-hmM" id="MDZ-sS-PUU"/>
+                        <outletCollection property="cardButtons" destination="0dR-2s-iF9" id="EZL-9a-mV2"/>
+                        <outletCollection property="cardButtons" destination="7Pe-Au-BSV" id="3d8-no-XHl"/>
+                        <outletCollection property="cardButtons" destination="iYr-B4-YY7" id="S0E-bT-D8i"/>
+                        <outletCollection property="cardButtons" destination="NBO-nD-VUJ" id="zNx-JC-5dj"/>
+                        <outletCollection property="cardButtons" destination="O0J-Gh-Pq7" id="7WH-lj-LVg"/>
+                        <outletCollection property="cardButtons" destination="SqF-8z-m2O" id="7NO-F9-GpW"/>
+                        <outletCollection property="cardButtons" destination="wNS-XU-rff" id="k0X-lm-0gM"/>
+                        <outletCollection property="cardButtons" destination="mVD-0a-ubZ" id="7Gg-0A-Sug"/>
+                        <outletCollection property="cardButtons" destination="yle-kj-QBH" id="K0e-IQ-IeP"/>
+                        <outletCollection property="cardButtons" destination="Zlh-pg-LXf" id="7KS-tf-vK6"/>
+                        <outletCollection property="cardButtons" destination="nwz-5d-f8W" id="XDu-i1-9ss"/>
+                        <outletCollection property="cardButtons" destination="eli-kg-QW2" id="wNf-M2-W1X"/>
+                        <outletCollection property="cardButtons" destination="lhv-OO-bl2" id="wIa-IF-hwk"/>
+                        <outletCollection property="cardButtons" destination="OEf-aS-YaT" id="Til-GY-0EX"/>
+                        <outletCollection property="cardButtons" destination="hYk-ev-DZ9" id="5hs-uV-ZNa"/>
+                        <outletCollection property="cardButtons" destination="wdB-oI-Wzv" id="XiK-td-3Qp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQd-mb-LrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -544,12 +867,16 @@
         </scene>
     </scenes>
     <classes>
+        <class className="CardButton" superclassName="UIButton">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardButton.h"/>
+        </class>
         <class className="GameResultsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameResultsViewController.h"/>
         </class>
         <class className="MatchingGameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MatchingGameViewController.h"/>
             <relationships>
+                <relationship kind="action" name="flipCard:" candidateClass="CardButton"/>
                 <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lastFlipLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>

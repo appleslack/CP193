@@ -10,5 +10,9 @@
 
 @interface SetsCardGame : CardGame
 
+// Public for unit testing purposes
+-(BOOL) matchSet:(NSArray *) selectedCards;
+
+-(void) selectCardAtIndex:(NSUInteger) index;
 
 @end

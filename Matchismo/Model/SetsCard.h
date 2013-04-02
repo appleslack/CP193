@@ -15,22 +15,23 @@ typedef enum {
 } kSGCardColor;
 
 typedef enum {
-    kCardFillSolid,
-    kCardFillPattern,
-    kCardFillEmpty
-} kSGCardFill;
+    kCardShadeSolid,
+    kCardShadeOpen,
+    kCardShadeStripped
+} kSGCardShading;
 
 typedef enum {
-    kCardShapeSwiggles,
-    kCardShapeDiamond,
-    kCardShapeOval
-} kSGCardShape;
+    kCardSymbolSwiggles,
+    kCardSymbolDiamonds,
+    kCardSymbolOvals
+} kSGCardSymbol;
 
 @interface SetsCard : Card
 
-@property (nonatomic) kSGCardColor cardColor;
-@property (nonatomic) kSGCardFill  cardFill;
-@property (nonatomic) kSGCardShape cardShape;
-@property (nonatomic) int         numShapes;
+@property (nonatomic) BOOL              isSelected;
+@property (nonatomic) kSGCardColor      color;
+@property (nonatomic) kSGCardShading    shading;
+@property (nonatomic) kSGCardSymbol     symbol;
+@property (nonatomic) int               numSymbols;
 
 @end
