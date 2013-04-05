@@ -11,11 +11,13 @@
 #import "SetsCardGame.h"
 #import "SetsCardDeck.h"
 #import "SetsCard.h"
+#import "CardGameViewController.h"
 
 @interface SetsCardGameViewController ()
 -(void) drawButton:(UIButton *)button withCard:(Card *)card;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardButtons;
+@property (strong, nonatomic) NSMutableDictionary * cardToCardButtonDict;
 
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -26,6 +28,24 @@
 @end
 
 @implementation SetsCardGameViewController
+
+-(SetsCardGame *) game
+{
+    if( nil == _game ) {
+        _game = [[SetsCardGame alloc] initWithCardCount:self.cardButtons.count
+                                              usingDeck:[SetsCardDeck new]];
+        
+    }
+    return _game;
+}
+
+-(NSMutableDictionary *) cardToCardButtonDict
+{
+    if( _cardToCardButtonDict == nil ) {
+        _cardToCardButtonDict = [NSMutableDictionary new];
+    }
+    return _cardToCardButtonDict;
+}
 
 -(void) drawButton:(UIButton *)button withCard:(SetsCard *)card;
 {
@@ -54,7 +74,8 @@
     
     UIColor *colorVal = nil;
     if( card.color == kCardColorGreen ) {
-        colorVal = [UIColor greenColor];
+//        colorVal = [UIColor greenColor];
+        colorVal = [UIColor colorWithRed:0.0 green:1.0 blue:.25 alpha:1.0];
     }
     else if( card.color == kCardColorPurple ) {
         colorVal = [UIColor purpleColor];
@@ -66,7 +87,10 @@
     
     NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:string];
     NSMutableDictionary *attributes = [NSMutableDictionary new];
-    [attributes setObject:[UIFont systemFontOfSize:18]  forKey:NSFontAttributeName];
+    if( card.symbol == kCardSymbolOvals )
+        [attributes setObject:[UIFont systemFontOfSize:18]  forKey:NSFontAttributeName];
+    else
+        [attributes setObject:[UIFont systemFontOfSize:20]  forKey:NSFontAttributeName];
 
     // If empty,
     if( card.shading == kCardShadeOpen ) {
@@ -87,16 +111,6 @@
     
     [button setAttributedTitle:titleString forState:UIControlStateNormal];
     
-}
-
--(SetsCardGame *) game
-{
-    if( nil == _game ) {
-        _game = [[SetsCardGame alloc] initWithCardCount:self.cardButtons.count
-                                              usingDeck:[SetsCardDeck new]];
-
-    }
-    return _game;
 }
 
 -(void) updateUI
@@ -123,17 +137,31 @@
     //        [button setTitle:card.contents forState:UIControlStateSelected];
     //    }
     _cardButtons = cardButtons;
+    // This is one way - the other is to use a custom UIButton class.
+    for( UIButton *button in cardButtons ) {
+        SetsCard *card = (SetsCard *)[self.game cardAtIndex:[self.cardButtons indexOfObject:button]];
+        [self.cardToCardButtonDict setObject:button forKey:card.contents];
+    }
     [self updateUI];
 }
 
 - (IBAction)chooseCard:(id)sender
 {
     SetsCard *card = (SetsCard *)[self.game cardAtIndex:[self.cardButtons indexOfObject:(UIButton *)sender]];
-    NSLog(@"You selected: %@", card);
+    SetsCardGame *game = (SetsCardGame *) self.game;
     
-    [self.game selectCardAtIndex:[self.cardButtons indexOfObject:(UIButton *)sender]];
-    
-    [self updateUI];
+    if( !card.isSelected && !card.isUnplayable ) {
+        NSLog(@"You selected: %@", card);
+        
+        [game selectCardAtIndex:[self.cardButtons indexOfObject:(UIButton *)sender]];
+        
+        for( SetsCard *selectedCard in game.selectedCards ) {
+            // Find the UIButton
+            UIButton *button = [self.cardToCardButtonDict objectForKey:[selectedCard contents]];
+            button.selected = TRUE;
+        }
+        [self updateUI];
+    }
 }
 
 - (void)viewDidLoad

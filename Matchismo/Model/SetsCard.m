@@ -29,37 +29,40 @@
     return card;
 }
 
--(NSString *) description
-{   // Card has 2 Solid Red Squirleys
-    NSString *colorStr = nil;
-    NSString *numberStr = nil;
-    
-    if( self.numSymbols == kCardOneSymbol) {
-        numberStr = @"One";
-    }
-    else if(self.numSymbols == kCardOneSymbol) {
-        numberStr = @"Two";
-    }
+-(NSString *) numberStr
+{
+    if( self.numSymbols == kCardOneSymbol)
+        return @"One";
+    else if(self.numSymbols == kCardOneSymbol)
+        return @"Two";
     else
-        numberStr = @"Three";
-    
-    if( self.color == kCardColorRed )
-        colorStr = @"Red";
-    else if( self.color == kCardColorGreen)
-        colorStr = @"Green";
-    else colorStr = @"Purple";
+        return @"Three";
+}
 
-    NSString *shadeStr = nil;
-    if( self.shading == kCardShadeOpen ) {
-        shadeStr = @"Open";
-    }
-    else if( self.shading == kCardShadeStripped ) {
-        shadeStr = @"Stripped";
-    }
-    else {
-        shadeStr = @"Solid";
-    }
-    NSString *symbolStr = nil;
+-(NSString *) colorStr
+{
+    if( self.color == kCardColorRed )
+        return @"Red";
+    else if( self.color == kCardColorGreen)
+        return @"Green";
+    else
+        return @"Purple";
+}
+
+-(NSString *) shadingStr
+{
+    if( self.shading == kCardShadeOpen )
+        return @"Open";
+    else if( self.shading == kCardShadeStripped )
+        return @"Stripped";
+    else
+        return @"Solid";
+}
+
+-(NSString *) symbolStr
+{
+    NSString *symbolStr;
+    
     if( self.symbol == kCardSymbolDiamonds ) {
         if(self.numSymbols==kCardOneSymbol) {
             symbolStr = @"Diamond";
@@ -84,6 +87,27 @@
             symbolStr = @"Swiggles";
         }
     }
+    
+    return symbolStr;
+}
+
+// This is to have a mapping of card -> UIButtons.  Just return a unique NSString for every type
+-(NSString *) contents
+{
+    NSString *colorStr = [self colorStr];
+    NSString *numberStr = [self numberStr];
+    NSString *shadeStr = [self shadingStr];
+    NSString *symbolStr = [self symbolStr];
+
+    return [NSString stringWithFormat:@"%@%@%@%@", numberStr, shadeStr, colorStr,symbolStr];
+}
+
+-(NSString *) description
+{   // Card has 2 Solid Red Squirleys
+    NSString *colorStr = [self colorStr];
+    NSString *numberStr = [self numberStr];
+    NSString *shadeStr = [self shadingStr];
+    NSString *symbolStr = [self symbolStr];
     
     return [NSString stringWithFormat:@"Card has %@ %@ %@ %@",
             numberStr,

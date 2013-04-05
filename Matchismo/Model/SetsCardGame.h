@@ -15,4 +15,6 @@
 
 -(void) selectCardAtIndex:(NSUInteger) index;
 
+@property (strong, nonatomic) NSMutableArray *selectedCards;
+
 @end

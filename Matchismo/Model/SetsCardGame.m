@@ -11,7 +11,6 @@
 
 @interface SetsCardGame()
 
-@property (strong, nonatomic) NSMutableArray *selectedCards;
 @property (strong, nonatomic) NSArray *lastMatchedSet;
 @end
 
@@ -43,6 +42,7 @@
                 }
                 for( SetsCard *card in self.selectedCards ) {
                     card.unplayable = match;
+                    card.isSelected = NO;
                 }
                 self.lastMatchedSet = self.selectedCards;
                 self.selectedCards = nil;
@@ -90,10 +90,12 @@
         kSGCardColor matchedColor =0;
         kSGCardShading matchedShading;
         kSGCardSymbol matchedSymbol;
-        NSUInteger matchedNumSymbols;
+        kSGCardNumSymbols matchedNumSymbols;
+        int numMatched = 0;
         
         // Check to see if all suits same or not same
         if( thirdCard.color&firstCard.color&secondCard.color ) {
+            numMatched++;
             matchResult &= MATCH_COLOR;
             matchedColor = firstCard.color;
         }
@@ -104,6 +106,7 @@
         }
 
         if( firstCard.symbol&secondCard.symbol&thirdCard.symbol ) {
+            numMatched++;
             matchResult |= MATCH_SYMBOL;
             matchedSymbol = firstCard.symbol;
         }
@@ -113,6 +116,7 @@
         }
 
         if( firstCard.shading&secondCard.shading&thirdCard.shading) {
+            numMatched++;
             matchResult |= MATCH_SHADING;
             matchedShading = firstCard.shading;
         }
@@ -122,6 +126,7 @@
         }
         
         if( firstCard.numSymbols&secondCard.numSymbols&thirdCard.numSymbols) {
+            numMatched++;
             matchResult |= MATCH_NUMBER;
             matchedNumSymbols = firstCard.numSymbols;
         }
@@ -130,28 +135,44 @@
             goto finished;
         }
         
-        // 1st Case:  Nothing is the same
-        if( matchResult == 0 ) {
+        if( numMatched == 0 ) {
             NSLog(@"All different Numbers - All different Colors - All different Symbols - All different Shadings!");
             matched = TRUE;
         }
-        // 2nd Case:  Only 1 matched, none of the others (Ex: color match, none others)
-        if( (MATCH_COLOR & matchResult) == matchResult ) {
-            NSLog(@"Matched COLOR everything else is different");
+        else if( numMatched == 1 ) {
+            NSLog(@"Good match - 1 the same!");
             matched = TRUE;
         }
-        else if( (MATCH_SYMBOL & matchResult) == matchResult) {
-            NSLog(@"Matched SHAPE - everything else is different");
+        else if( numMatched == 3 ) {
+            NSLog(@"Good match - all the same" );
             matched = TRUE;
         }
-        else if( (MATCH_SHADING & matchResult) == matchResult) {
-            NSLog(@"Matched FILL - everything else is different");
-            matched = TRUE;
+        else {
+            NSLog(@"Cards to not make a valid set");
         }
-        else if( (MATCH_NUMBER & matchResult) == matchResult) {
-            NSLog(@"Matched NUMBER - everything else is different");
-            matched = TRUE;
-        }
+        
+//        // 1st Case:  Nothing is the same
+//        if( matchResult == 0 ) {
+//            NSLog(@"All different Numbers - All different Colors - All different Symbols - All different Shadings!");
+//            matched = TRUE;
+//        }
+//        // 2nd Case:  Only 1 matched, none of the others (Ex: color match, none others)
+//        if( (MATCH_COLOR & matchResult) == matchResult ) {
+//            NSLog(@"Matched COLOR everything else is different");
+//            matched = TRUE;
+//        }
+//        else if( (MATCH_SYMBOL & matchResult) == matchResult) {
+//            NSLog(@"Matched SHAPE - everything else is different");
+//            matched = TRUE;
+//        }
+//        else if( (MATCH_SHADING & matchResult) == matchResult) {
+//            NSLog(@"Matched FILL - everything else is different");
+//            matched = TRUE;
+//        }
+//        else if( (MATCH_NUMBER & matchResult) == matchResult) {
+//            NSLog(@"Matched NUMBER - everything else is different");
+//            matched = TRUE;
+//        }
         
     }
     
