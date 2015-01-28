@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CardButton.h"
 #import "PlayingCardDeck.h"
+#import "CardGameViewController.h"
 
 @interface MatchingGameViewController : UIViewController
 

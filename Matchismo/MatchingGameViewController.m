@@ -25,13 +25,26 @@
 
 @implementation MatchingGameViewController
 
--(CardMatchingGame *) game
+-(CardGame *) game
 {
-    if( nil == _game ) {
-        _game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
+    if( nil == self.game ) {
+        self.game = [[CardMatchingGame alloc] initWithCardCount:self.cardButtons.count
                                                   usingDeck:[PlayingCardDeck new]];
     }
-    return _game;
+    return self.game;
+}
+
+-(void) setCardButtons:(NSArray *)cardButtons
+{
+    //    for( UIButton *button in cardButtons ) {
+    //        Card *card = [self.deck drawRandomCard];
+    //        [button setTitle:card.contents forState:UIControlStateSelected];
+    //    }
+    if( cardButtons ) {
+        _cardButtons = cardButtons;
+    }
+    
+    [self updateUI];
 }
 
 -(void) updateUI
@@ -40,7 +53,7 @@
         Card *card = [self.game cardAtIndex:[self.cardButtons indexOfObject:cardButton]];
         [cardButton setTitle:card.contents forState:UIControlStateSelected];
         [cardButton setTitle:card.contents forState:UIControlStateSelected|UIControlStateDisabled];
-
+        
         cardButton.selected = card.isFaceUp;
         cardButton.enabled = !card.isUnplayable;
         cardButton.alpha = card.isUnplayable?0.3:1.0;
@@ -51,13 +64,9 @@
     
 }
 
--(void) setCardButtons:(NSArray *)cardButtons
+- (IBAction)dealCards
 {
-//    for( UIButton *button in cardButtons ) {
-//        Card *card = [self.deck drawRandomCard];
-//        [button setTitle:card.contents forState:UIControlStateSelected];
-//    }
-    _cardButtons = cardButtons;
+    [self.game startGame:FALSE];
     [self updateUI];
 }
 
@@ -68,12 +77,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.lastFlipLabel.text = @"";
 
-}
-
-- (IBAction)dealCards
-{
-    [self.game startGame:FALSE];
-    [self updateUI];
 }
 
 - (IBAction)flipCard:(CardButton *)sender
@@ -90,12 +93,6 @@
         self.lastFlipLabel.text = @"Error - card not found";
         [self updateUI];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(void) setFlipCount:(int)flipCount
